@@ -4,7 +4,7 @@ pipeline {
     environment {
         APP_NAME = "frontBankingDEVOPS"
         RELEASE = "1.0.0"
-        DOCKER_IMAGE = "rima603/frontbankingdevops"
+        DOCKER_IMAGE = "rima603/frontbankadevops"
         SONARQUBE_ENV = "sonarqube"
         SONAR_PROJECT_KEY = "frontbanking"
     }
@@ -21,7 +21,7 @@ pipeline {
                 git(
                     branch: 'main',
                     credentialsId: 'github',
-                    url: 'https://github.com/rima-gif/FrontBackingDevops.git'
+                    url: 'https://github.com/rima-gif/frontBanka.git'
                 )
             }
         }
