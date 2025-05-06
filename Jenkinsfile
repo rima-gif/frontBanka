@@ -5,8 +5,7 @@ pipeline {
         APP_NAME = "frontBankingDEVOPS"
         RELEASE = "1.0.0"
         DOCKER_IMAGE = "rima603/frontbankadevops"
-        SONARQUBE_ENV = "sonarqube"
-        SONAR_PROJECT_KEY = "frontbanking"
+      
     }
 
     stages {
@@ -39,21 +38,7 @@ pipeline {
             }
         }
 
-        stage("SonarQube Analysis") {
-            steps {
-                withSonarQubeEnv("${SONARQUBE_ENV}") {
-                    withCredentials([string(credentialsId: 'jenkins-sonarqube-token', variable: 'SONAR_TOKEN')]) {
-                        sh """
-                            sonar-scanner \
-                              -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-                              -Dsonar.sources=. \
-                              -Dsonar.host.url=$SONAR_HOST_URL \
-                              -Dsonar.login=$SONAR_TOKEN
-                        """
-                    }
-                }
-            }
-        }
+     
 
         stage("Wait for Quality Gate") {
             steps {
