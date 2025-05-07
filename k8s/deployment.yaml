@@ -16,6 +16,6 @@ spec:
     spec: 
       containers:
         - name: frontend
-          image: rima603/frontbankingdevops:latest
+          image: rima603/frontbankadevops:latest
           ports:
             - containerPort: 80 
