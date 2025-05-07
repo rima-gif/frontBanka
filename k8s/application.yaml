@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: frontend-banka
-  namespace: argocd-front
+  namespace: argocdfront
 spec:
   project: default
 
