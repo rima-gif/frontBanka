@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: 'https://github.com/rima-gif/FrontDevSecOps'
     targetRevision: HEAD
-    path: frontend-banka
+    path: k8s
   
   destination:
     server: 'https://kubernetes.default.svc'
