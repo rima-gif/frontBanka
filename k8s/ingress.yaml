@@ -17,4 +17,4 @@ spec:
               service:
                 name: frontend
                 port:
-                  number: 80  # Port du service frontend
+                  number: 80
