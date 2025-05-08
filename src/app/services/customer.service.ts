@@ -12,22 +12,22 @@ export class CustomerService {
 
 //méthode pour retourner la liste de tous les customers
   public getCustomers():Observable<Array<Customer>>{
-    return this.http.get<Array<Customer>>(environment.apiUrl+"/customers")
+    return this.http.get<Array<Customer>>(environment.backendHost+"/customers")
   }
 
   //méthode de recherche d'un customer
   public searchCustomers(keyword : string):Observable<Array<Customer>>{
-    return this.http.get<Array<Customer>>(environment.apiUrl+"/customers/search?keyword="+keyword)
+    return this.http.get<Array<Customer>>(environment.backendHost+"/customers/search?keyword="+keyword)
   }
 
   //méthode enregistrer pour un customer
   public saveCustomer(customer: Customer):Observable<Customer>{
-    return this.http.post<Customer>(environment.apiUrl+"/customers",customer);
+    return this.http.post<Customer>(environment.backendHost+"/customers",customer);
   }
 
   //méthode de suppression customer
   public deleteCustomer(id: number){
-    return this.http.delete(environment.apiUrl+"/customers/"+id);
+    return this.http.delete(environment.backendHost+"/customers/"+id);
   }
 
 }

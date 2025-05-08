@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  backendHost : "http://192.168.40.112:30081",
-  apiUrl: "http://192.168.40.112:30081" //variable d'environnement pour serveur backend
+  backendHost : "http://192.168.40.112:30081"
+
 };
 
 /*
