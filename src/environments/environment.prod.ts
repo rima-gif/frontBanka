@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendHost: 'http://prod-backend.com'  // Backend pour la production
+  backendHost: 'http://192.168.40.122:30081'  
 
 };
