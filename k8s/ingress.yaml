@@ -2,19 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend-ingress
-  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ingress.class: "nginx" 
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: front.local
+    - host: banka.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: frontend
+                name: frontend  
                 port:
                   number: 80
