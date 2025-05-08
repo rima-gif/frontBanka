@@ -3,16 +3,16 @@ kind: Ingress
 metadata:
   name: frontend-ingress
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx  
   rules:
-  - host: banka.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend
-            port:
-              number: 80
+    - host: banka.local
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
