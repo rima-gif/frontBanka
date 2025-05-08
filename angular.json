@@ -77,7 +77,9 @@
               "browserTarget": "digital-banking-web:build:production"
             },
             "development": {
-              "browserTarget": "digital-banking-web:build:development"
+              "browserTarget": "digital-banking-web:build:development",
+              "proxyConfig": "proxy.conf.json"  
+
             }
           },
           "defaultConfiguration": "development"
@@ -85,6 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+
             "browserTarget": "digital-banking-web:build"
           }
         },
