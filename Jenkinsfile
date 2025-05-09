@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins-Agent' }
+    agent { label 'jenkins-Agent2' }
 
     environment {
         APP_NAME = "frontBankingDEVOPS"
